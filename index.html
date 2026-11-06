@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalbimin ve Ömrümün Tek Sahibine</title>
+    <style>
+        body, html {
+            margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0c1b, #2c0e14, #0f0c1b);
+            color: #fff; overflow-x: hidden; display: flex; flex-direction: column; align-items: center;
+        }
+        .bg-hearts {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;
+        }
+        .heart {
+            position: absolute; bottom: -10%; font-size: 24px; animation: floatUp 6s infinite linear; opacity: 0.6;
+        }
+        @keyframes floatUp {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+            100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+        }
+        .content {
+            position: relative; z-index: 2; width: 90%; max-width: 700px; text-align: center; padding: 20px; box-sizing: border-box;
+        }
+        h1 { color: #ff3366; font-size: 2.8rem; margin-bottom: 10px; text-shadow: 0 0 15px #ff3366; }
+        h2 { color: #ff9999; font-weight: 300; margin-bottom: 40px; }
+        .memory-box {
+            background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 51, 102, 0.4);
+            border-radius: 20px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+            display: flex; flex-direction: column; align-items: center; text-align: left;
+        }
+        .memory-box h2 { align-self: center; color: #ff6680; margin-bottom: 20px; font-size: 1.8rem; text-align: center; }
+        img, video {
+            width: 100%; max-height: 400px; border-radius: 15px; object-fit: cover; margin: 10px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+        .media-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; width: 100%; margin: 20px 0;
+        }
+        .letter-text {
+            font-size: 1.3rem; line-height: 1.9; color: #fff; text-indent: 30px; margin-bottom: 20px;
+        }
+        .highlight { color: #ff9999; font-weight: bold; text-shadow: 0 0 5px #ff3366; }
+        .quote {
+            font-style: italic; color: #ffcccc; border-left: 4px solid #ff3366; padding-left: 15px;
+            font-size: 1.4rem; margin: 20px 0; align-self: stretch; text-align: center;
+        }
+        .buttons {
+            display: flex; justify-content: center; gap: 20px; width: 100%; margin-top: 30px; flex-wrap: wrap; position: relative;
+        }
+        .btn {
+            padding: 15px 30px; font-size: 1.3rem; font-weight: bold; border: none; border-radius: 50px;
+            cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; text-decoration: none;
+        }
+        #btn-yes { background-color: #ff3366; color: white; box-shadow: 0 0 20px #ff3366; }
+        #btn-no { background-color: #444; color: #ccc; position: relative; }
+    </style>
+</head>
+<body>
+
+<audio id="bg-music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+    Tarayıcınız müzik çaları desteklemiyor.
+</audio>
+
+<div class="bg-hearts"></div>
+
+<div class="content">
+    <h1>Kalbimin ve Ömrümün Tek Sahibine</h1>
+    <h2>İki Buçuk Yıllık Sonsuzluğumuzun, Mücadelemizin ve Aşkımızın Hikayesi</h2>
+
+    <div class="memory-box">
+        <p class="letter-text">
+            Gözlerime ilk baktığın o anı dün gibi hafızamda taşıyorum. İkimiz de öylesine çekingen, öylesine masum ve utangaç bir haldeydik ki... Ama o an kalbimde öyle bir fırtına koptu, ruhumda öyle bir çiçek açtı ki, kelebeklerin kanat çırpışını bizzat içimde hissettim. O kısacık andan sonra sen benim hayatımın merkezi, aldığım nefesin tek sebebi haline geldin. Her sabah uyandığımda aklımda ve dualarımda sadece sen varsan; her gece başımı yastığa huzurla koyduğumda tek dileğim rüyalarımda bile seninle buluşmak oluyor.
+        </p>
+    </div>
+
+    <div class="memory-box">
+        <h2>Utangaçlığımızın ve O İlk Bakışın Eşsiz Masumiyeti</h2>
+        <p style="text-align: center; width: 100%;">Birlikte yazdığımız bu destanın ilk günkü heyecanı.</p>
+        <div class="media-grid">
+            <img src="1.jpg" alt="Fotoğraf 1">
+            <img src="2.jpg" alt="Fotoğraf 2">
+            <img src="3.jpg" alt="Fotoğraf 3">
+            <img src="4.jpg" alt="Fotoğraf 4">
+            <img src="5.jpg" alt="Fotoğraf 5">
+            <img src="6.jpg" alt="Fotoğraf 6">
+        </div>
+    </div>
+
+    <div class="memory-box">
+        <p class="letter-text">
+            Biliyorum, <span class="highlight">bizim hikayemiz asla kolay bir yolculuk olmadı.</span> Etrafımızdaki engeller, çekemeyenler, aramıza mesafe ve soğukluk sokmaya çalışan o kötü niyetli insanlar... Kim ne derse desin, hangi fırtına kopsa biz her zaman birbirimize tutunduk. Bazen benim fevriliklerim, bazen senin kırılmaların oldu; hatalar yaptık, incindik. Ama unutma ki biz birbirimizi sadece sıradan bir hevesle sevmedik. Bizler, hayatın zorluklarına inat, birbirine ruhunun en derin yerinden bağlanmış iki aşığız.
+        </p>
+    </div>
+
+    <div class="memory-box">
+        <h2>Birlikte Gönül Verip, Birlikte Meydan Okuduğumuz Fırtınalar</h2>
+        <div class="media-grid">
+            <video controls>
+                <source src="video1.mp4" type="video/mp4">
+                Tarayıcınız video oynatıcıyı desteklemiyor.
+            </video>
+            <video controls>
+                <source src="video2.mp4" type="video/mp4">
+                Tarayıcınız video oynatıcıyı desteklemiyor.
+            </video>
+        </div>
+        <p class="letter-text" style="margin-top: 15px; text-indent: 0; text-align: center;">
+            Bu görüntüler, bizim yıkılmaz bağımızın ve paylaştığımız eşsiz mutluluğun canlı kanıtıdır.
+        </p>
+    </div>
+
+    <div class="memory-box">
+        <p class="letter-text">
+            Beni kırdığım veya üzdüğüm her an için bağışla sevgilim. Sen benim bu hayattaki en güvenli limanım, en büyük şansımsın. Aşkımız her gün yeniden filizlenen ve büyüyen bir mucize.
+        </p>
+        <p class="quote">
+            "Seninle geçen her saniye, ömrüme ömür katan en güzel hediye."
+        </p>
+        <p style="text-align: center; font-size: 1.3rem; margin-top: 20px; font-weight: bold; width: 100%;">Beni affediyor musun?</p>
+        <div class="buttons">
+            <button class="btn" id="btn-yes" onclick="alert('Seni dünyalar kadar çok seviyorum! ❤️ Kalbimin tek sahibisin.')">Evet, affediyorum ❤️</button>
+            <button class="btn" id="btn-no" onmouseover="moveNoButton()" onclick="moveNoButton()">Hayır</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function createHeart() {
+        const heart = document.createElement('div');
+        heart.classList.add('heart');
+        heart.innerHTML = '❤️';
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDuration = Math.random() * 3 + 3 + 's';
+        document.querySelector('.bg-hearts').appendChild(heart);
+        setTimeout(() => { heart.remove(); }, 6000);
+    }
+    setInterval(createHeart, 250);
+
+    function moveNoButton() {
+        const btnNo = document.getElementById('btn-no');
+        const x = Math.random() * (window.innerWidth - 120) - (window.innerWidth / 2 - 60);
+        const y = Math.random() * 200 - 100;
+        btnNo.style.transform = `translate(${x}px, ${y}px)`;
+    }
+
+    document.body.addEventListener('click', function() {
+        const music = document.getElementById('bg-music');
+        if (music && music.paused) {
+            music.play();
+        }
+    }, { once: true });
+</script>
+
+</body>
+</html>
