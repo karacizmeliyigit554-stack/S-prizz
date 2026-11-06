@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canım Özür Dilerim...</title>
+    <style>
+        body, html {
+            margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0c1b, #2c0e14, #0f0c1b);
+            color: #fff; overflow-x: hidden; display: flex; flex-direction: column; align-items: center;
+        }
+        .bg-hearts {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;
+        }
+        .heart {
+            position: absolute; bottom: -10%; font-size: 24px; animation: floatUp 6s infinite linear; opacity: 0.6;
+        }
+        @keyframes floatUp {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+            100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+        }
+        .content {
+            position: relative; z-index: 2; width: 90%; max-width: 700px; text-align: center; padding: 20px; box-sizing: border-box;
+        }
+        h1 { color: #ff3366; font-size: 2.8rem; margin-bottom: 10px; text-shadow: 0 0 15px #ff3366; }
+        h2 { color: #ff9999; font-weight: 300; margin-bottom: 40px; }
+        .memory-box {
+            background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 51, 102, 0.4);
+            border-radius: 20px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+            display: flex; flex-direction: column; align-items: center; text-align: left;
+        }
+        .memory-box h2 { align-self: center; color: #ff6680; margin-bottom: 20px; font-size: 1.8rem; text-align: center; }
+        img, video {
+            width: 100%; max-height: 400px; border-radius: 15px; object-fit: cover; margin: 10px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+        .media-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; width: 100%; margin: 20px 0;
+        }
+        .letter-text {
+            font-size: 1.3rem; line-height: 1.9; color: #fff; text-indent: 30px; margin-bottom: 20px;
+        }
+        .highlight { color: #ff9999; font-weight: bold; text-shadow: 0 0 5px #ff3366; }
+        .quote {
+            font-style: italic; color: #ffcccc; border-left: 4px solid #ff3366; padding-left: 15px;
+            font-size: 1.4rem; margin: 20px 0; align-self: stretch; text-align: center;
+        }
+        .buttons {
+            display: flex; justify-content: center; gap: 20px; width: 100%; margin-top: 30px; flex-wrap: wrap; position: relative;
+        }
+        .btn {
+            padding: 15px 30px; font-size: 1.3rem; font-weight: bold; border: none; border-radius: 50px;
+            cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; text-decoration: none;
+        }
+        #btn-yes { background-color: #ff3366; color: white; box-shadow: 0 0 20px #ff3366; }
+        #btn-no { background-color: #444; color: #ccc; position: relative; }
+    </style>
+</head>
+<body>
+
+<audio id="bg-music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+    Tarayıcınız müzik çaları desteklemiyor.
+</audio>
+
+<div class="bg-hearts"></div>
+
+<div class="content">
+    <h1>Beni Affet Birtanem...</h1>
+    <h2>Birlikte Büyüttüğümüz Aşkımıza ve Geçtiğimiz Yollara İthafen</h2>
+
+    <div class="memory-box">
+        <p class="letter-text">
+            Dün gece yaşananlar ve ağzımdan çıkan düşüncesiz sözler yüzünden ne kadar pişman olduğumu anlatmaya kelimeler yetmiyor. İlk günden beri birbirimizin gözlerine bakarken duyduğumuz o masum heyecanı düşündükçe, dün gece seni kırdığım için kendimden utanıyorum. Seni üzmek, bu dünyada isteyeceğim en son şey bile olamaz.
+        </p>
+    </div>
+
+    <div class="memory-box">
+        <h2>İlk Anın Masumiyeti ve Güzel Hatıralarımız</h2>
+        <p style="text-align: center; width: 100%;">Tüm fırtınalara rağmen biriktirdiğimiz en güzel anlar.</p>
+        <div class="media-grid">
+            <img src="1.jpg" alt="Fotoğraf 1">
+            <img src="2.jpg" alt="Fotoğraf 2">
+            <img src="3.jpg" alt="Fotoğraf 3">
+            <img src="4.jpg" alt="Fotoğraf 4">
+            <img src="5.jpg" alt="Fotoğraf 5">
+            <img src="6.jpg" alt="Fotoğraf 6">
+        </div>
+    </div>
+
+    <div class="memory-box">
+        <p class="letter-text">
+            Biliyorum, <span class="highlight">bizim yolumuz hiç kolay olmadı.</span> Araya giren mesafeler, etrafımızdaki engeller, kötü niyetli insanlar ve hayatın getirdiği ağır yükler... Biz her şeye rağmen el ele verip o fırtınalardan çıktık. Bazen benim hatalarım, bazen fevriliklerim oldu ama biz sıradan bir hevesle sevmedik birbirimizi. Ancak dün gece o güzel kalbini haksız yere kırdım ve beni her halimle seven sana bu haksızlığı yaptığım için çok üzgünüm.
+        </p>
+    </div>
+
+    <div class="memory-box">
+        <h2>Birlikte Omuz Omuza Verdiğimiz Mücadelemiz</h2>
+        <div class="media-grid">
+            <video controls>
+                <source src="video1.mp4" type="video/mp4">
+                Tarayıcınız video oynatıcıyı desteklemiyor.
+            </video>
+            <video controls>
+                <source src="video2.mp4" type="video/mp4">
+                Tarayıcınız video oynatıcıyı desteklemiyor.
+            </video>
+        </div>
+        <p class="letter-text" style="margin-top: 15px; text-indent: 0; text-align: center;">
+            Geçtiğimiz zorlu yollar ve sarsılmaz bağımız, dün gecenin karanlığından çok daha güçlü.
+        </p>
+    </div>
+
+    <div class="memory-box">
+        <p class="letter-text">
+            Sen benim bu hayattaki tek güvenli limanım, en büyük şansımsın. Dün geceki hatam yüzünden o güzel yüzünü güldürmek yerine seni ağlattıysam tüm ruhumla özür dilerim. Lütfen bağışla beni sevgilim.
+        </p>
+        <p class="quote">
+            "Biz ne fırtınalar atlattık seninle... Dün gecenin karanlığını da birbirimize sarılarak aydınlığa çıkaralım, n'olur beni affet."
+        </p>
+        <p style="text-align: center; font-size: 1.3rem; margin-top: 20px; font-weight: bold; width: 100%;">Dün gece için beni affediyor musun?</p>
+        <div class="buttons">
+            <button class="btn" id="btn-yes" onclick="alert('Seni dünyalar kadar çok seviyorum! ❤️ Söz veriyorum bu aşkı ve seni bir daha asla incitmeyeceğim.')">Evet, affediyorum ❤️</button>
+            <button class="btn" id="btn-no" onmouseover="moveNoButton()" onclick="moveNoButton()">Hayır</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function createHeart() {
+        const heart = document.createElement('div');
+        heart.classList.add('heart');
+        heart.innerHTML = '❤️';
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDuration = Math.random() * 3 + 3 + 's';
+        document.querySelector('.bg-hearts').appendChild(heart);
+        setTimeout(() => { heart.remove(); }, 6000);
+    }
+    setInterval(createHeart, 250);
+
+    function moveNoButton() {
+        const btnNo = document.getElementById('btn-no');
+        const x = Math.random() * (window.innerWidth - 120) - (window.innerWidth / 2 - 60);
+        const y = Math.random() * 200 - 100;
+        btnNo.style.transform = `translate(${x}px, ${y}px)`;
+    }
+
+    document.body.addEventListener('click', function() {
+        const music = document.getElementById('bg-music');
+        if (music && music.paused) {
+            music.play();
+        }
+    }, { once: true });
+</script>
+
+</body>
+</html>
