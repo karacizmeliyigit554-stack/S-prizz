@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalbimin Tek Sahibine</title>
+    <style>
+        body, html {
+            margin: 0; padding: 0; width: 100%; min-height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a0000, #4d0000, #800000);
+            color: #fff; overflow-x: hidden;
+            display: flex; flex-direction: column; align-items: center;
+        }
+        .bg-hearts {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none; z-index: 1; overflow: hidden;
+        }
+        .heart {
+            position: absolute; bottom: -60px;
+            display: inline-block; width: 25px; height: 25px;
+            transform: rotate(-45deg);
+            animation: floatUp 8s infinite linear;
+            opacity: 0.8;
+        }
+        .heart::before, .heart::after {
+            content: ''; position: absolute; width: 25px; height: 25px;
+            border-radius: 50%;
+        }
+        .heart::before { top: -12.5px; left: 0; }
+        .heart::after { top: 0; left: 12.5px; }
+        @keyframes floatUp {
+            0% { transform: translateY(0) rotate(-45deg) scale(0.6); opacity: 1; }
+            100% { transform: translateY(-100vh) rotate(-45deg) scale(1.2); opacity: 0; }
+        }
+        .content-wrapper {
+            position: relative; z-index: 2; width: 90%; max-width: 900px;
+            background: rgba(0, 0, 0, 0.65); padding: 40px; border-radius: 30px;
+            box-shadow: 0 0 50px rgba(255, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center; margin: 50px 0;
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            font-size: 3.5rem; color: #ff3333; text-shadow: 0 0 30px #ff0000;
+            margin-bottom: 10px; font-family: 'Georgia', serif;
+        }
+        .subtitle { font-size: 1.5rem; color: #ff9999; margin-bottom: 40px; font-style: italic; }
+        p {
+            font-size: 1.3rem; line-height: 2; margin-bottom: 30px;
+            text-align: justify; text-justify: inter-word;
+            padding: 0 10px; color: #f2f2f2;
+        }
+        .highlight { color: #ff4d4d; font-weight: bold; font-size: 1.4rem; }
+        .polaroid {
+            background: #fff; padding: 20px 20px 40px 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            margin: 50px auto; width: 80%; max-width: 500px;
+            transform: rotate(-3deg); transition: transform 0.3s;
+            border-radius: 5px;
+        }
+        .polaroid:nth-child(even) { transform: rotate(3deg); }
+        .polaroid:hover { transform: rotate(0deg) scale(1.02); }
+        .polaroid img, .polaroid video {
+            width: 100%; height: auto; display: block; filter: contrast(1.1);
+        }
+        .caption {
+            margin-top: 20px; font-family: 'Courier New', monospace;
+            color: #333; font-size: 1.2rem; font-weight: bold;
+        }
+        .button-area { margin-top: 60px; position: relative; padding: 20px; }
+        .btn {
+            padding: 25px 50px; font-size: 1.8rem; border: none; border-radius: 50px;
+            cursor: pointer; font-weight: bold; transition: all 0.3s;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+        .yes-btn {
+            background: linear-gradient(45deg, #ff1a1a, #ff9999);
+            color: white; box-shadow: 0 0 30px #ff0000;
+        }
+        .yes-btn:hover { transform: scale(1.1); box-shadow: 0 0 50px #ff0000; }
+        .no-btn {
+            background: #404040; color: #aaa; position: absolute;
+            padding: 15px 30px; font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-hearts" id="heartRain"></div>
+
+    <div class="content-wrapper">
+        <h1>Kalbimin ve Ömrümün Tek Sahibine</h1>
+        <div class="subtitle">İki Buçuk Yıllık Sonsuzluğumuzun Hikayesi</div>
+
+        <p><span class="highlight">Gözlerine ilk baktığım o anı</span> dün gibi hatırlıyorum. İkimiz de öylesine çekingen, öylesine utanıyorduk ki... Ama o an içimde öyle bir fırtına koptu ki, kelebeklerin kanat çırpışını ta ruhumda hissettim. O günden sonra hayatımın merkezi, nefes alma sebebim oldun. Her sabah uyandığımda aklımda sen, her gece başımı yastığa koyduğumda kalbimde yine sen vardın.</p>
+
+        <div class="polaroid">
+            <img src="fotograf1.jpg" alt="İlk Anılar">
+            <div class="caption">Utangaçlığımızın ve o ilk bakışın masumiyeti...</div>
+        </div>
+
+        <p>Biliyorum, <span class="highlight">kolay bir yolculuk olmadı.</span> Çevremizdekiler, engeller, aramıza girmeye çalışanlar... Kim ne derse desin, hangi zorluk çıkarsa çıksın biz hep birbirimize tutunduk. Bazen ben hatalar yaptım, bazen sen kırıldın; ama biz birbirimizi sadece öylesine sevmedik. Biz gerçekten, en saf ve en gerçek haliyle bağlandık.</p>
+
+        <p>Sana sarıldığım o ilk anı asla unutamam. Ve biliyor musun? <span class="highlight">Sana her sarılışımda, sanki ilk kez sarılıyormuşum gibi</span> içim titredi. Senin yanındayken maskelerimi indirdim, yeniden çocuk oldum, seninle güldüm, seninle büyüdüm. Sen benim sevgilimden öte; ailem, sığınağım, bu hayattaki tek yaşama sevincimsin.</p>
+
+        <div class="polaroid">
+            <video controls autoplay loop muted playsinline>
+                <source src="video1.mp4" type="video/mp4">
+            </video>
+            <div class="caption">Birlikte gülüp, birlikte aştığımız onca anın hatırası.</div>
+        </div>
+
+        <p><span class="highlight">Şimdi yaptığım hatanın,</span> o anki aşırı kıskançlığımın ve öfkemle ağzımdan çıkan o ağır kelimelerin derin pişmanlığı içindeyim. Sevdiğim insanın gururunu incitecek, seni üzecek o cümleleri kurduğum için kahroluyorum. O anlar benim gerçek hislerim değildi; sadece seni kaybetme korkusunun getirdiği bir acizlikti. Söylediğim hiçbir kötü sözün arkasında durmuyorum, tüm sorumluluğu göğsümde üstleniyorum.</p>
+
+        <p>Sen bana Rabbimin bir emanetisin, benim en güzel nasibimsin. Elimden gelse kalbimi yerinden çıkartıp avuçlarına veririm. <span class="highlight">Lütfen bu iki buçuk yılın hatırına,</span> sana olan tertemiz sevgimin hürmetine beni affet. Sensiz bir hayat benim için nefessiz kalmaktan farksız.</p>
+
+        <div class="polaroid">
+            <img src="fotograf2.jpg" alt="Mutlu Anımız">
+            <div class="caption">Seninle olduğum her an, yeniden doğuyorum.</div>
+        </div>
+
+        <h2>Tüm Kalbimle Soruyorum...</h2>
+        <div class="button-area">
+            <button class="btn yes-btn" onclick="alert('Affettiğin için dünyalar benim oldu! Seni hayatımın sonuna kadar başımın tacı edeceğim.')">BENİ AFFETTİN MİR?</button>
+            <button class="btn no-btn" id="runBtn" onmouseover="moveRunBtn()">HAYIR</button>
+        </div>
+    </div>
+
+    <script>
+        function createRain() {
+            const container = document.getElementById('heartRain');
+            const colors = ['#ff1a1a', '#ff6666', '#ff9999', '#ff0055', '#cc0044', '#ffcccc'];
+            for (let i = 0; i < 40; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animationDuration = (Math.random() * 6 + 6) + 's';
+                heart.style.animationDelay = Math.random() * 5 + 's';
+                const col = colors[Math.floor(Math.random() * colors.length)];
+                heart.style.setProperty('--heart-color', col);
+                heart.style.backgroundColor = col;
+                const pseudoElements = document.createElement('style');
+                pseudoElements.innerHTML = `.heart::before, .heart::after { background-color: ${col}; }`;
+                document.head.appendChild(pseudoElements);
+                container.appendChild(heart);
+            }
+        }
+        createRain();
+
+        function moveRunBtn() {
+            const btn = document.getElementById('runBtn');
+            btn.style.left = Math.random() * 70 + 'vw';
+            btn.style.top = Math.random() * 70 + 'vh';
+        }
+    </script></body>
+</html>
